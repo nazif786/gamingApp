@@ -15,6 +15,7 @@ const useGams = () => {
     const { request, cancel } = gamesService.getAll<FetchGamesResponse>();
     request
       .then((res) => {
+        // eslint-disable
         setGames(res.data.results);
         setLoading(false);
         // console.log(res.data);
