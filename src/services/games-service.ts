@@ -1,18 +1,7 @@
-import create from "./http-service";
-export interface Platforms {
-  id: number;
-  name: string;
-  slug: string;
-}
-export interface Game {
-  id: number;
-  name: string;
-  background_image: string;
-  parent_platforms: { platform: Platforms }[];
-  metacritic: number;
-}
-export interface FetchGamesResponse {
-  count: number;
-  results: Game[];
-}
-export default create("/games");
+// import create from "./http-service";
+
+// export interface FetchGamesResponse {
+//   count: number;
+//   results: Game[];
+// }
+// export default create("/games");
