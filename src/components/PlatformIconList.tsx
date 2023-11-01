@@ -1,4 +1,4 @@
-import { Platforms } from "../services/games-service";
+import { Platforms } from "../hooks/useGams";
 import { HStack, Icon, Text } from "@chakra-ui/react";
 import {
   FaWindows,
