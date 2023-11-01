@@ -1,13 +1,15 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Show } from "@chakra-ui/react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelectro from "./components/PlatformSelectro";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [selectedPlatform, setSelectedPlatform] = useState<Genre | null>(null);
 
   return (
     <div className="app">
@@ -34,6 +36,9 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
+          <PlatformSelectro
+            onSelectPlatfrom={() => setSelectedPlatform(selectedPlatform)}
+          />
           <GameGrid selectedGenre={selectedGenre} />
         </GridItem>
       </Grid>
