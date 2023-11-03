@@ -1,3 +1,4 @@
+import { BsSearch } from "react-icons/bs";
 // import { Platforms } from "./useGams";
 import { GameQuery } from "../App";
 import useData from "./useData";
@@ -25,6 +26,7 @@ const useGams = (gameQuery: GameQuery) =>
         genres: gameQuery.genre?.id,
         Platforms: gameQuery.platform?.id,
         ordering: gameQuery.sortOrder,
+        search: gameQuery.searchText,
       },
     },
     [gameQuery],
