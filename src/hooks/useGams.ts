@@ -1,8 +1,6 @@
-import { BsSearch } from "react-icons/bs";
 // import { Platforms } from "./useGams";
 import { GameQuery } from "../App";
 import useData from "./useData";
-import { Genre } from "./useGenres";
 // import { Platforms } from "./usePlatform";
 
 export interface Platform {
