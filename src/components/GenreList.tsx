@@ -17,14 +17,14 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data } = useGenres();
   // if (error) return null;
   // if (isLaoding) return <Spinner />;
-  // console.log(data);
+  console.log(data);
   return (
     <>
       <Heading fontSize="2xl" marginBottom={3}>
         Genres
       </Heading>
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
               <Image
