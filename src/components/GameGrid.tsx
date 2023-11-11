@@ -1,9 +1,9 @@
-import useGams from "../hooks/useGams";
-import { Text, SimpleGrid } from "@chakra-ui/react";
-import GameCard from "./GameCard";
-import GameCardSkeleton from "./GameCardSkeleton";
-import GameCardContainer from "./GameCardContainer";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import { GameQuery } from "../App";
+import useGams from "../hooks/useGams";
+import GameCard from "./GameCard";
+import GameCardContainer from "./GameCardContainer";
+import GameCardSkeleton from "./GameCardSkeleton";
 
 interface Props {
   gameQuery: GameQuery;
@@ -12,22 +12,22 @@ interface Props {
 }
 
 const GameGrid = ({ gameQuery }: Props) => {
-  const { data, error, isLaoding } = useGams(gameQuery);
+  const { data, error, isLoading } = useGams(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
-  if (error) return <Text>{error}</Text>;
+  if (error) return <Text>{error.message}</Text>;
   return (
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
       spacing={5}
       padding="10px"
     >
-      {isLaoding &&
-        skeletons.map((skeleton) => (
-          <GameCardContainer key={skeleton}>
+      {isLoading &&
+        skeletons.map((skeleton, index) => (
+          <GameCardContainer key={index}>
             <GameCardSkeleton key={skeleton} />
           </GameCardContainer>
         ))}
-      {data.map((game) => (
+      {data?.results.map((game) => (
         // <li key={game.id}>{game.name}</li>
         <GameCardContainer key={game.id}>
           <GameCard key={game.id} game={game} />
