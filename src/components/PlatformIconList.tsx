@@ -1,4 +1,3 @@
-import { Platform } from "../hooks/useGams";
 import { HStack, Icon } from "@chakra-ui/react";
 import {
   FaWindows,
@@ -12,6 +11,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { IconType } from "react-icons";
+import { Platforms } from "../hooks/usePlatform";
 
 // index signature: [key, string] it represents a key or property of this object
 // like here we have pc, mac etc...by using thge index signature we don't have to specify
@@ -31,7 +31,7 @@ const iconMap: { [key: string]: IconType } = {
   web: BsGlobe,
 };
 interface Props {
-  platforms: Platform[];
+  platforms: Platforms[];
 }
 
 const PlatformIconList = ({ platforms }: Props) => {

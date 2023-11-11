@@ -6,13 +6,13 @@ import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import PlatformSelectro from "./components/PlatformSelectro";
-import { Platform } from "./hooks/useGams";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import { Platforms } from "./hooks/usePlatform";
 
 export interface GameQuery {
   genre: Genre | null;
-  platform: Platform | null;
+  platform: Platforms | null;
   sortOrder: string;
   searchText: string;
   rating_top: number;
