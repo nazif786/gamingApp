@@ -16,6 +16,7 @@ export interface GameQuery {
   sortOrder: string;
   searchText: string;
   rating_top: number;
+  pageSize: number;
 }
 
 function App() {
