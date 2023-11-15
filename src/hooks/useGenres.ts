@@ -9,15 +9,14 @@ export interface Genre {
   image_background: string;
 }
 // const useGenres = () => ({ data: genre, isLaoding: false, error: null });
-const useGenres = () => {
-  return useQuery<FetchResponse<Genre>>({
+const useGenres = () =>
+  useQuery({
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
     // () => apiClient.get("/genres").then((res) => res.data),
     staleTime: 24 * 60 * 60 * 1000, // 24hours
     initialData: { count: genres.length, results: genres },
   });
-};
 export default useGenres;
 
 // second part starts from here

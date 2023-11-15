@@ -16,7 +16,7 @@ export interface Platforms {
 // const usePlatfrom = () => ({ data: platforms, isLoading: false, error: null });
 // 3. fetching data using React-Query
 const usePlatfrom = () =>
-  useQuery<FetchResponse<Platforms>, Error>({
+  useQuery({
     queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     // () => apiClient.get("/platforms").then((res) => res.data),
