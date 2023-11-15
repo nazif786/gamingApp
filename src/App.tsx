@@ -8,6 +8,7 @@ import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
 // build the app with no erros
+// end of part two
 
 function App() {
   // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
