@@ -8,6 +8,8 @@ import PlatformSelectro from "./components/PlatformSelectro";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
+// build the app with no erros
+
 export interface GameQuery {
   genreId?: number;
   platformId?: number;
