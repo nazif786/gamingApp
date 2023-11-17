@@ -1,39 +1,30 @@
 import { Box, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
-import "./App.css";
-import NavBar from "./components/NavBar";
-import GameGrid from "./components/GameGrid";
-import GenreList from "./components/GenreList";
-import PlatformSelectro from "./components/PlatformSelectro";
-import SortSelector from "./components/SortSelector";
-import GameHeading from "./components/GameHeading";
+import GenreList from "../GenreList";
+import GameHeading from "../GameHeading";
+import PlatformSelectro from "../PlatformSelectro";
+import SortSelector from "../SortSelector";
+import GameGrid from "../GameGrid";
 
-// build the app with no erros
-// end of part two
-
-function App() {
-  // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  // const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(null);
-  // const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
+const Home = () => {
   return (
-    <div className="app">
+    <>
       <Grid
         className="grid"
         templateAreas={{
-          base: `"nav" "main"`,
-          lg: `"nav nav" "aside main"`, // lg is > 1024px
+          base: `"main"`,
+          lg: `"aside main"`, // lg is > 1024px
         }}
         templateColumns={{
           base: "1fr",
           lg: "200px 1fr",
         }}
       >
-        <GridItem area="nav">
-          <NavBar />
-          {/* onSearch={(searchText) =>
+        {/* <GridItem area="nav">
+          <NavBar /> */}
+        {/* onSearch={(searchText) =>
               setGameQuery({ ...gameQuery, searchText })
             } */}
-        </GridItem>
+        {/* </GridItem> */}
         <Show above="lg">
           <GridItem area="aside" paddingX={5}>
             <GenreList />
@@ -63,8 +54,8 @@ function App() {
           <GameGrid /> {/*gameQuery={gameQuery} */}
         </GridItem>
       </Grid>
-    </div>
+    </>
   );
-}
+};
 
-export default App;
+export default Home;
