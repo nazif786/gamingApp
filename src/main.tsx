@@ -6,6 +6,8 @@ import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme.ts";
 import App from "./App.tsx";
 import "./index.css";
+// import { RouterProvider } from "react-router-dom";
+// import router from "./routs/routs.tsx";
 
 const queryClient = new QueryClient();
 
@@ -14,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <QueryClientProvider client={queryClient}>
+        {/* <RouterProvider router={router}> */}
         <App />
+        {/* </RouterProvider> */}
         <ReactQueryDevtools />
       </QueryClientProvider>
     </ChakraProvider>
