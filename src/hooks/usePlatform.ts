@@ -2,13 +2,9 @@
 import platforms from "../data/platforms";
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../services/api-client";
+import { Platforms } from "../entities/Platforms";
 
 const apiClient = new APIClient<Platforms>("/platforms/lists/parents");
-export interface Platforms {
-  id: number;
-  name: string;
-  slug: string;
-}
 // 1. gettin data using react- useEffect and react useState
 // const usePlatfrom = () => useData<Platforms>("/platforms/lists/parents");
 // 2. fetching dta using static file ../data/platfroms
