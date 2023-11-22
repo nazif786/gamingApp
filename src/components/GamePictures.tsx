@@ -1,4 +1,4 @@
-import { Box, Image, SimpleGrid } from "@chakra-ui/react";
+import { Image, SimpleGrid } from "@chakra-ui/react";
 import usePictures from "../entities/usePictures";
 import getCroppedImageUrl from "../services/image-url";
 

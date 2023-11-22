@@ -1,8 +1,8 @@
 import { HStack, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { ColorModeSwitch } from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
-import { Link, useNavigate } from "react-router-dom";
 
 // interface Props {
 //   onSearch: (searchText: string) => void;
